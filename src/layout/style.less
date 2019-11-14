@@ -1,0 +1,38 @@
+body,
+#app,
+.container {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  color: #fff;
+  box-shadow: 0 2px 4px #ccc;
+  height: auto;
+  & > div {
+    height: auto;
+    flex: none;
+    display: flex;
+
+    & > a {
+      text-align: center;
+      width: 100%;
+      color: #333;
+      display: inline-block;
+      padding: 12px;
+      text-decoration: none;
+      &:hover {
+        background: #2d8cf0;
+        color: #fff;
+      }
+    }
+  }
+}
+.content {
+  height: calc(100% - 70px);
+  padding: 12px;
+}
