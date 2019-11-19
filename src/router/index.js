@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import { renderRoutes } from "@/utils";
+import { HashRouter } from "react-router-dom";
+import RouterView from "@/components/router-view";
+
 import routes from "./config";
 
 export default class App extends React.Component {
@@ -9,6 +10,10 @@ export default class App extends React.Component {
     super(props);
   }
   render() {
-    return <Router>{renderRoutes(routes)}</Router>;
+    return (
+      <HashRouter>
+        <RouterView route={{ childrens: routes }} />
+      </HashRouter>
+    );
   }
 }

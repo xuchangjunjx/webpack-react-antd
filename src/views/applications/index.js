@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Link } from "react-router-dom";
-import { renderRoutes } from "@/utils";
+import RouterView from "@/components/router-view";
 import "./style.less";
 export default class Application extends React.Component {
   constructor(props) {
@@ -32,11 +32,7 @@ export default class Application extends React.Component {
           </ul>
         </div>
         <div className="right">
-          {this.state.showChild ? "" : "hello"}
-
-          {renderRoutes(this.state.route.childrens, {
-            someProp: "these extra props are optional"
-          })}
+          <RouterView route={this.props.route} />
         </div>
       </div>
     );
