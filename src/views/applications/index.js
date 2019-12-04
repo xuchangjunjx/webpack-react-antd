@@ -7,16 +7,8 @@ export default class Application extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      route: props.route,
-      showChild: false
+      route: props.route
     };
-    this.props.history.listen(route => {
-      const { pathname } = route;
-
-      this.setState({
-        showChild: this.state.route.path != pathname
-      });
-    });
   }
   render() {
     return (
