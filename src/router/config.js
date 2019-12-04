@@ -3,6 +3,7 @@ import Home from "@/views/company";
 import Child from "@/views/applications";
 import Bus from "@/views/applications/bus";
 import Cart from "@/views/applications/cart";
+import hook from "@/views/applications/hook";
 
 export default [
   {
@@ -31,6 +32,10 @@ export default [
           {
             path: "/application/bus",
             component: Bus
+          },
+          {
+            path: "/application/hook",
+            component: hook
           }
         ]
       }

@@ -29,6 +29,9 @@ export default class Application extends React.Component {
             <li>
               <Link to="/application/bus">bus</Link>
             </li>
+            <li>
+              <Link to="/application/hook">hook</Link>
+            </li>
           </ul>
         </div>
         <div className="right">
